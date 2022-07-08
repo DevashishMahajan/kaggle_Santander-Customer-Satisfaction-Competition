@@ -1,2 +1,35 @@
 # kaggle_Santander-Customer-Satisfaction-Competition
+
+Link: https://www.kaggle.com/c/santander-customer-satisfaction
+
 Applying various machine leaning algorithms to solve kaggle Santander Customer Satisfaction competition.
+
+Overview:
+
+Description:
+From frontline support teams to C-suites, customer satisfaction is a key measure of success. Unhappy customers don't stick around. What's more, unhappy customers rarely voice their dissatisfaction before leaving.
+
+Santander Bank is asking Kagglers to help them identify dissatisfied customers early in their relationship. Doing so would allow Santander to take proactive steps to improve a customer's happiness before it's too late.
+
+In this competition, you'll work with hundreds of anonymized features to predict if a customer is satisfied or dissatisfied with their banking experience.
+
+
+Evaluation: 
+Submissions are evaluated on area under the ROC curve between the predicted probability and the observed target.
+
+Submission File
+For each ID in the test set, you must predict a probability for the TARGET variable. 
+
+
+Data Description:
+You are provided with an anonymized dataset containing a large number of numeric variables. The "TARGET" column is the variable to predict. It equals one for unsatisfied customers and 0 for satisfied customers.
+
+The task is to predict the probability that each customer in the test set is an unsatisfied customer.
+
+File descriptions
+train.csv - the training set including the target
+test.csv - the test set without the target
+sample_submission.csv - a sample submission file in the correct format
+
+
+
