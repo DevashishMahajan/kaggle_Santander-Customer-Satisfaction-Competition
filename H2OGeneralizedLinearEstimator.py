@@ -8,6 +8,9 @@ import pandas as pd
 import h2o
 h2o.init()
 
+#kaggle API to download dataset 
+#kaggle competitions download -c santander-customer-satisfaction
+
 df=h2o.import_file(r"D:\CDAC ML\Cases\Kaggle\Santander Customer Satisfaction\train.csv",destination_frame="Santander_train")
 
 test=h2o.import_file(r"D:\CDAC ML\Cases\Kaggle\Santander Customer Satisfaction\test.csv",destination_frame="Santander_test")
