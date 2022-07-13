@@ -11,13 +11,19 @@ h2o.init()
 #kaggle API to download dataset 
 #kaggle competitions download -c santander-customer-satisfaction
 
+
+# Change the file path as the file path in your computer
+# Read csv files from kaggle dataset as Pandas Dataframe
 df=h2o.import_file(r"D:\CDAC ML\Cases\Kaggle\Santander Customer Satisfaction\train.csv",destination_frame="Santander_train")
 
 test=h2o.import_file(r"D:\CDAC ML\Cases\Kaggle\Santander Customer Satisfaction\test.csv",destination_frame="Santander_test")
 
 print(df.col_names)
 
+#y is a label
 y = 'TARGET'
+
+# X is a feature 
 X = df.col_names[1:-1]
 
 X_test=test.col_names[1:]
@@ -53,7 +59,7 @@ submit=pd.concat([test['ID'].as_data_frame(),y_pred_df[['p1']]],axis=1)
 submit.rename(columns={'p1':'TARGET'},inplace=True)
 submit.to_csv('Santander_H2O_logistic.csv',index=False)
 
-###naive 
+###naive bayes
 from h2o.estimators.naive_bayes import H2ONaiveBayesEstimator
 
 nb= H2ONaiveBayesEstimator()
@@ -63,10 +69,12 @@ nb.train(x=X, y=y,training_frame=df,
 
 y_pred = nb.predict(test_data=test)
 
-y_pred_df= y_pred.as_data_frame() #convert into pandas dataframe
+#convert into pandas dataframe
+y_pred_df= y_pred.as_data_frame() 
 
 print(nb.auc())
 print(nb.confusion_matrix())
+
 #h2o.cluster().shutdown() #close resources
 
 
