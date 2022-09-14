@@ -22,7 +22,7 @@ Applying various machine leaning algorithms to solve kaggle Santander Customer S
 
 
 ## Data Description:
-  You are provided with an anonymized dataset containing a large number of numeric variables. The **"TARGET" column** is the variable to **predict**. It equals **one for unsatisfied customers** and **0 for satisfied customers.**
+  You are provided with an anonymized dataset containing a large number of numeric variables. The **"TARGET" column** is the variable to **predict**. It equals **1 for unsatisfied customers** and **0 for satisfied customers.**
 
 ## The task is to predict the probability that each customer in the test set is an unsatisfied customer.
 
